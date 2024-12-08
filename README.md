@@ -51,9 +51,13 @@ Predict brain responses using the extracted NLP features.
           -python predictbrainfromnlp.py --subject 01 --nlp_feat_type roberta --nlp_feat_dir nlp_features --layer 6 --sequence_length 4 --output_dir OUTPUT_DIR
 
 ###### 4.4 Evaluation
-After evaluating the predicted brain responses against the ground truth data, the mean accuracies for each subject are calculated and saved in CSV format for easy access and further analysis. The CSV file includes the evaluation results for all subjects.
+The evaluation of the predicted brain responses is performed using classification accuracy. Specifically, the mean 20v20 classification accuracy is computed over 1000 random samplings of 20 words. The steps are as follows:
 
-         -python evaluate_brain_predictions.py --input_path OUTPUT_DIR/predict_01_with_roberta_layer_6_len_4.npy --output_path OUTPUT_DIR/evaluation_results --subject 01
+Accuracy Computation: For each encoding model across the 4 cross-validation (CV) folds, accuracies are calculated for all voxels.
+Output: Results are saved as a pickle file (*_accs.pkl) containing accuracies for all voxels across folds.
+Mean Accuracy: The average accuracy across the 4 folds is calculated and saved in a CSV format (mean_accuracies.csv) for further analysis.
+
+         -python evaluate_brain_predictions.py --input_path OUTPUT_DIR/predict_01_with_roberta_layer_6_len_4.npy --output_path OUTPUT_DIR/evaluation_results  
 
 
 ### 5. Contribution: New Dataset
@@ -90,8 +94,8 @@ Predict brain responses:
                python predictbrainfromnlp.py --subject 01 --nlp_feat_type roberta --nlp_feat_dir nlp_features --layer 6 --sequence_length 4 --output_dir OUTPUT_DIR
 Evaluate predictions:
 
-               python evaluate_brain_predictions.py --input_path OUTPUT_DIR/predict_01_with_roberta_layer_6_len_4.npy --output_path OUTPUT_DIR/evaluation_results --subject 01
-
+              python evaluate_brain_predictions.py --input_path OUTPUT_DIR/predict_01_with_roberta_layer_6_len_4.npy --output_path OUTPUT_DIR/evaluation_results  
+              
 ### Output Files
 The output files, including predicted brain responses and evaluation results, are large in size. To ensure accessibility, they have been uploaded to the [Drive](https://georgiancollege-my.sharepoint.com/:f:/g/personal/200573180_student_georgianc_on_ca/EubPdj272vtPicK6J9m9MuEBNtXVgcnfT1rPTYUugQIzlQ?e=UjdjBC).
 
