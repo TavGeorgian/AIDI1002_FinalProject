@@ -24,12 +24,11 @@ The following tools and libraries are required:
 
 ### 3. Dataset
 Original Dataset
-The original dataset is available under the repository: dataset_2/ds000204. It contains fMRI scans and sentence annotations.
+The [original dataset](https://drive.google.com/drive/folders/1Q6zVCAJtKuLOh-zWpkS3lH8LBvHcEOE8) is available. It contains fMRI scans and sentence annotations.
 
-New Dataset
-The new dataset used for this project is: 
+[New Dataset](https://openneuro.org/datasets/ds000204/versions/00002)
 
-Description:
+Description: The new dataset, titled "ds000204", is an fMRI dataset designed to explore brain activity in response to natural language processing tasks. Participants listened to short passages of text while their brain responses were recorded using functional MRI. The dataset includes NIfTI files representing fMRI scans, as well as annotations for the text stimuli. This dataset is useful for investigating the relationship between language representations and brain activity.
 
 ### 4. Steps to Reproduce Results
 ###### 4.1 Data Conversion
