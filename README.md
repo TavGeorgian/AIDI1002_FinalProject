@@ -97,7 +97,7 @@ Evaluate predictions:
               python evaluate_brain_predictions.py --input_path OUTPUT_DIR/predict_01_with_roberta_layer_6_len_4.npy --output_path OUTPUT_DIR/evaluation_results  
               
 ### Output Files
-The output files, including predicted brain responses and evaluation results, are large in size. To ensure accessibility, they have been uploaded to the [Drive](https://georgiancollege-my.sharepoint.com/:f:/g/personal/200573180_student_georgianc_on_ca/EubPdj272vtPicK6J9m9MuEBNtXVgcnfT1rPTYUugQIzlQ?e=UjdjBC).
+The output files, including predicted brain responses and evaluation results, are large in size. To ensure accessibility, they have been uploaded to the [Drive](https://drive.google.com/drive/folders/12q--E-jiP_WPgvE7_0uF6FFe52gsGRE4?usp=drive_link).
 
 
 #### Project Members
